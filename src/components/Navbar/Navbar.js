@@ -2,10 +2,10 @@
 import React from 'react';
 import './Navbar.css';
 
-const Home = () => {
+const Navbar = () => {
     return (
         <div class="navbar">
-            <a href="#home">Home</a>
+            <a href="#home" className='home-section'>Home</a>
             <div class="dropdown">
                 <button class="dropbtn">About
                     <i class="fa fa-caret-down"></i>
@@ -14,12 +14,12 @@ const Home = () => {
                     <a href="#">Experience</a>
                     <a href="#">Skills</a>
                     <a href="#">Education</a>
+                    <a href="#">Projects</a>
                 </div>
             </div>
-            <a href="#projects">Projects</a>
-            <a href="#news">Contact Us</a>
+            <a href="#news" className='contact-section'>Contact</a>
         </div>
     );
 };
 
-export default Home;
+export default Navbar;
