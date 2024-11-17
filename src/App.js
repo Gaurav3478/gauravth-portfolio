@@ -11,7 +11,7 @@ import Education from './pages/Education/Education';
 import Experience from './pages/Experience/Experience';
 import Projects from './pages/Projects/Projects';
 import ContactPage from './pages/ContactPage/ContactPage';
-import SkillsPage from './pages/SkillsPage/SkillsPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 import './App.css';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route index exact path="/" element={<HomePage />} />
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
