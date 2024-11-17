@@ -1,79 +1,104 @@
-import React, { useState } from 'react';
-import './ContactPage.css';
+import React, { useState } from "react";
+import "./ContactPage.css";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder for email functionality
-    alert(`Message sent!\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-  };
+
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_o2nav1i';
+    const templateId = 'template_mwldgx8';
+    const publicKey = 'Md5kdU0N6F5zlbxeH';
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'Gaurav',
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setName('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+  }
 
   return (
     <div id="contacts" className="container">
       <div id="contact-div">
-        <a href="mailto:gaurav.t2002@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-item">
-          <img src="../../../assets/images/Email.png" alt="Email" className="icon" />
+        <a
+          href="mailto:gaurav.t2002@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-item"
+        >
+          <img
+            src="../../../assets/images/Email.png"
+            alt="Email"
+            className="icon"
+          />
           <span>Email:</span> gaurav.t2002@gmail.com
         </a>
         <a href="#contacts" className="contact-item">
-          <img src="../../../assets/images/Phone.png" alt="Phone" className="icon" />
+          <img
+            src="../../../assets/images/Phone.png"
+            alt="Phone"
+            className="icon"
+          />
           <span>Phone:</span> +91 8920633049
         </a>
         <div id="contact-list" className="social-links">
-          <a href="https://www.linkedin.com/in/gaurav-thakur-1042601b7/" target="_blank" rel="noopener noreferrer" className="contact-item">
-            <img src="../../../assets/images/Linkedin.png" alt="LinkedIn" className="icon" />
+          <a
+            href="https://www.linkedin.com/in/gaurav-thakur-1042601b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <img
+              src="../../../assets/images/Linkedin.png"
+              alt="LinkedIn"
+              className="icon"
+            />
             <span>LinkedIn:</span> Gaurav Thakur
           </a>
         </div>
       </div>
 
-      {/* Contact Form */}
-      <form onSubmit={handleSubmit} className="contact-form">
-        <h2>Send a Message</h2>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button type="submit">Send</button>
-      </form>
+      <form onSubmit={handleSubmit} className='emailForm'>
+      <input
+        type="text"
+        placeholder="Your Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="email"
+        placeholder="Your Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <textarea
+        cols="30"
+        rows="10"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      >
+      </textarea>
+      <button type="submit">Send Email</button>
+    </form>
     </div>
   );
 };
