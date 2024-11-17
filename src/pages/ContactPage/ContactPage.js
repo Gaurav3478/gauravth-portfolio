@@ -38,6 +38,12 @@ const ContactPage = () => {
 
   return (
     <div id="contacts" className="container">
+      <h1 className="contact-header">Get in Touch</h1>
+      <p className="contact-description">
+        If you have any questions or just want to reach out, feel free to send me a message. 
+        You can use the contact form below or connect with me through email, phone, or LinkedIn.
+      </p>
+
       <div id="contact-div">
         <a
           href="mailto:gaurav.t2002@gmail.com"
@@ -78,27 +84,28 @@ const ContactPage = () => {
       </div>
 
       <form onSubmit={handleSubmit} className='emailForm'>
-      <input
-        type="text"
-        placeholder="Your Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Your Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <textarea
-        cols="30"
-        rows="10"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      >
-      </textarea>
-      <button type="submit">Send Email</button>
-    </form>
+        <h2>Contact Form</h2>
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <textarea
+          cols="30"
+          rows="10"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Your Message"
+        ></textarea>
+        <button type="submit">Send Email</button>
+      </form>
     </div>
   );
 };
