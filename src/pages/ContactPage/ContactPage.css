@@ -1,0 +1,112 @@
+/* General container styling */
+.container {
+    width: 80%;
+    max-width: 900px; /* Optional: limits width for larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  }
+  
+  /* Contact form header */
+  .contact-header {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Description text styling */
+  .contact-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  /* Contact information section - Ensure consistent centering */
+  #contact-div {
+    display: flex;
+    flex-direction: column; /* Stack contact items vertically */
+    align-items: center; /* Center align all items */
+    margin-bottom: 30px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+    width: 100%; /* Ensures all contact items occupy equal width */
+    justify-content: center; /* Center the content inside each item */
+  }
+  
+  .contact-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the contact links section */
+  #contact-list {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 20px;
+  }
+  
+  #contact-div a:hover {
+    color: #0073e6;
+    text-decoration: underline;
+  }
+  
+  /* Contact form container styling */
+  .emailForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Optional: keeps form width manageable */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .emailForm h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields and textarea styling */
+  .emailForm input, .emailForm textarea {
+    width: 100%;
+    padding: 12px 20px; /* Added horizontal padding to give space inside the input/textarea */
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+  }
+  
+  /* Submit button styling */
+  .emailForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073e6;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .emailForm button:hover {
+    background-color: #005bb5;
+  }
+  
