@@ -24,7 +24,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contactme" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );
