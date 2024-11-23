@@ -7,7 +7,17 @@ const Navbar = () => {
     return (
         <div class="navbar">
             <div>
-                <a href='/'>Portfolio</a>
+                <a className='portfolio-heading' href='/'>
+                    <span>P</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>I</span>
+                    <span>O</span>
+                </a>
             </div>
             <div className='navbar-section'>
                 <NavLink to="/about" activeClassName="active">ABOUT</NavLink>
