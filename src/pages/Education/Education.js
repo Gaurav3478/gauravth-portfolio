@@ -1,9 +1,10 @@
 import React from 'react';
+import EducationExperience from '../../components/EducationExperience/EducationExperience';
 
 const Education = () => {
   return (
       <div >
-        Education Page
+        <EducationExperience title = 'Hello!!' description = 'I studied here' GPA = '5'/>
       </div>
   );
 };
