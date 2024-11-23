@@ -1,0 +1,51 @@
+/* General Container */
+.education-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styles */
+  .education-header {
+    text-align: center;
+    color: #0078D4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Styles */
+  .education-section {
+    margin-bottom: 30px;
+  }
+  
+  .education-title {
+    color: #444;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* List Styles */
+  .education-list {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+    padding: 0;
+  }
+  
+  .education-list li {
+    margin: 5px 0;
+  }
+  
+  /* Extra Styling */
+  strong {
+    color: #0078D4;
+  }
+  
+  em {
+    color: #555;
+  }
+  
