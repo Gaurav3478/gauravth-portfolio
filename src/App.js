@@ -18,6 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <hr className='horizontal-line'></hr>
       <Routes>
         <Route index exact path="/" element={<HomePage />} />
         <Route path="/education" element={<Education />} />

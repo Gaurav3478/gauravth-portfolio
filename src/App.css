@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+body {
+  background-color: #f0f2f5;
+}
+
+.horizontal-line{
+  height: 3px;
+  background-color: #c0afaf;
+}
 
 .App-logo {
   height: 40vmin;
@@ -33,6 +41,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

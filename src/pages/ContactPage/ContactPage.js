@@ -10,12 +10,10 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS service ID, template ID, and Public Key
     const serviceId = 'service_o2nav1i';
     const templateId = 'template_mwldgx8';
     const publicKey = 'Md5kdU0N6F5zlbxeH';
 
-    // Create a new object that contains dynamic template params
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -23,50 +21,39 @@ const ContactPage = () => {
       message: message,
     };
 
-    // Send the email using EmailJS
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log('Email sent successfully!', response);
         setName('');
         setEmail('');
         setMessage('');
+        var element = document.getElementById("succesful-response-after-sending");
+        element.classList.remove("succesful-response-appear");
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
+        var element = document.getElementById("unsuccesful-response-after-sending");
+        element.classList.remove("unsuccesful-response-appear");
       });
   }
 
   return (
+    <div className="contact-page-container">
     <div id="contacts" className="container">
-      <h1 className="contact-header">Get in Touch</h1>
-      <p className="contact-description">
-        If you have any questions or just want to reach out, feel free to send me a message. 
-        You can use the contact form below or connect with me through email, phone, or LinkedIn.
-      </p>
-
-      <div id="contact-div">
-        <a
-          href="mailto:gaurav.t2002@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-item"
-        >
-          <img
-            src="../../../assets/images/Email.png"
-            alt="Email"
-            className="icon"
-          />
-          <span>Email:</span> gaurav.t2002@gmail.com
-        </a>
-        <a href="#contacts" className="contact-item">
-          <img
-            src="../../../assets/images/Phone.png"
-            alt="Phone"
-            className="icon"
-          />
-          <span>Phone:</span> +91 8920633049
-        </a>
-        <div id="contact-list" className="social-links">
+      <div className="contact-details">
+        <h1 className="contact-header">Get in Touch</h1>
+        <div id="contact-div">
+          <a
+            href="mailto:gaurav.t2002@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <img
+              src="../../../assets/images/Email.png"
+              alt="Email"
+              className="icon"
+            />
+          </a>
           <a
             href="https://www.linkedin.com/in/gaurav-thakur-1042601b7/"
             target="_blank"
@@ -78,7 +65,14 @@ const ContactPage = () => {
               alt="LinkedIn"
               className="icon"
             />
-            <span>LinkedIn:</span> Gaurav Thakur
+          </a>
+          <a href="#contacts" className="contact-item contact-item-phone" >
+            <img
+              src="../../../assets/images/Phone.png"
+              alt="Phone"
+              className="icon"
+            />
+            <span>+91 8920633049</span>
           </a>
         </div>
       </div>
@@ -97,16 +91,21 @@ const ContactPage = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <textarea
-          cols="30"
-          rows="10"
+        <input
+          type="message"
+          placeholder="Your Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your Message"
-        ></textarea>
+        />
         <button type="submit">Send Email</button>
       </form>
-    </div>
+      <div id="succesful-response-after-sending" className="succesful-response-appear appear">
+        Email Sent successfully :)
+      </div>
+      <div id="unsuccesful-response-after-sending" className="unsuccesful-response-appear appear">
+        Error sending email....Try Again Later :(
+      </div>
+    </div></div>
   );
 };
 
