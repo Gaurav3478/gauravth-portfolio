@@ -6,9 +6,14 @@ const Home = () => {
     <div className="home">
       <h1>Welcome to My Portfolio</h1>
       <p>Hi, I'm Gaurav. I'm a Software Engineer</p>
-      <a href="../../../assets/files/Arrabelli_Varsha_Reddy_Resume_2024.pdf" download>
-        <button type="submit"><span>Download My CV</span><img src="../../../assets/images/Download.png"
-          alt="Download CV"></img></button>
+      <a 
+        href="https://drive.google.com/file/d/1yJY9qk93BZRjc2iR16gY_YxXq28NcFEF/view?usp=sharing" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <button type="button">
+          <span>View My CV</span>
+        </button>
       </a>
     </div>
   );
