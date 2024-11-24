@@ -1,25 +1,74 @@
 .education-experience {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Increased width for a wider box */
+    margin: 20px auto; /* Centers the component and adds vertical spacing */
+    padding: 30px; /* Increased padding for more space inside the box */
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #ddd; /* Light border for subtle separation */
+    border-radius: 10px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    min-height: 200px; /* Ensures the box has a sufficient height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .education-experience:hover {
+    transform: translateY(-10px); /* Lifts the box slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow for a more pronounced effect */
   }
   
   .experience-title {
-    color: #0078D4;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.6rem; /* Slightly bigger title for prominence */
+    font-weight: bold;
+    color: #333; /* Dark gray for a professional tone */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Makes the title all caps for emphasis */
+  }
+  
+  .experience-timeline {
+    font-size: 1.1rem;
+    color: #666; /* Medium gray for secondary info */
+    margin-bottom: 15px;
   }
   
   .experience-description {
-    color: #555;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #444; /* Slightly lighter than title for contrast */
+    margin-bottom: 15px;
+    line-height: 1.6; /* Adds more space between lines for readability */
   }
   
-  .experience-gpa {
-    color: #333;
+  .experience-grade {
+    font-size: 1.1rem;
     font-weight: bold;
+    color: #2a7ae4; /* Professional blue accent for highlights */
+  }
+  
+  .experience-grade strong {
+    color: #2a7ae4; /* Highlight the word "Grade" in the same blue */
+  }
+  
+  body {
+    padding: 0; /* Removes any unwanted padding on the body */
+    margin: 0; /* Removes any unwanted margin on the body */
+    box-sizing: border-box; /* Includes padding in element width/height */
+  }
+  
+  .container {
+    padding: 20px; /* General padding for the page */
+  }
+  
+  nav {
+    margin-bottom: 20px; /* Ensure navbar has space below */
+  }
+  
+  .education-experience + .education-experience {
+    margin-top: 40px; /* Adds spacing between components */
+  }
+  
+  /* Make sure the text doesn't touch the edges */
+  @media (max-width: 900px) {
+    .education-experience {
+      max-width: 100%; /* Ensures the box takes up full width on smaller screens */
+      padding: 20px; /* Reduces padding on smaller screens */
+    }
   }
   
