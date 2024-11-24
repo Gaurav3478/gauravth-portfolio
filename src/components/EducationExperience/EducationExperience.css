@@ -1,70 +1,113 @@
 .education-experience {
-  max-width: 900px; /* Card width */
-  margin: 20px auto; /* Centered alignment */
-  padding: 30px; /* Padding inside the card */
-  background-color: #ffffff; /* White background */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  position: relative; /* Enable positioning for child elements */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  width: 70%;
+  /* Card width */
+  margin: 20px auto;
+  /* Centered alignment */
+  padding: 30px;
+  /* Padding inside the card */
+  background-color: #ffffff;
+  /* White background */
+  border: 1px solid #ddd;
+  /* Light border */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  position: relative;
+  /* Enable positioning for child elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.education-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .education-experience:hover {
-  transform: translateY(-10px); /* Slight lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  transform: translateY(-10px);
+  /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* More pronounced shadow */
 }
 
 .experience-logo {
-  width: 80px; /* Set a consistent width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the logo fits without distortion */
-  position: absolute; /* Position relative to the card */
-  top: 15px; /* Distance from the top of the card */
-  right: 15px; /* Distance from the right edge of the card */
+  width: 10%;
+  /* Set a consistent width */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: contain;
+  /* Ensure the logo fits without distortion */
+  position: absolute;
+  /* Position relative to the card */
+  top: 15px;
+  /* Distance from the top of the card */
+  right: 15px;
+  /* Distance from the right edge of the card */
 }
 
 .experience-title {
-  font-size: 1.6rem; /* Slightly bigger font */
+  font-size: 1.6rem;
+  /* Slightly bigger font */
   font-weight: bold;
-  color: #333; /* Dark gray for a professional tone */
+  color: #333;
+  /* Dark gray for a professional tone */
   margin-bottom: 15px;
-  text-transform: capitalize; /* More natural capitalization */
+  text-transform: capitalize;
+  /* More natural capitalization */
+  margin-right: 1rem;
+  width: 90%;
 }
 
 .experience-timeline {
   font-size: 1.1rem;
-  color: #666; /* Medium gray for secondary text */
+  color: #666;
+  /* Medium gray for secondary text */
   margin-bottom: 15px;
 }
 
 .experience-points {
   font-size: 1.2rem;
-  color: #444; /* Slightly lighter for contrast */
-  margin: 20px 0; /* Vertical spacing for the list */
-  line-height: 1.6; /* Better readability */
-  list-style-type: disc; /* Standard bullet points */
-  text-align: left; /* Align list items to the left */
-  padding-left: 40px; /* Indent list items */
+  color: #444;
+  /* Slightly lighter for contrast */
+  margin: 20px 0;
+  /* Vertical spacing for the list */
+  line-height: 1.6;
+  /* Better readability */
+  list-style-type: disc;
+  /* Standard bullet points */
+  text-align: left;
+  /* Align list items to the left */
+  padding-left: 40px;
+  /* Indent list items */
 }
 
 .experience-grade {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333; /* Professional dark gray */
+  color: #333;
+  /* Professional dark gray */
 }
 
 .experience-grade strong {
-  color: #333; /* Keep strong text consistent */
+  color: #333;
+  /* Keep strong text consistent */
 }
 
 @media (max-width: 900px) {
   .education-experience {
-    padding: 20px; /* Reduce padding for smaller screens */
-    max-width: 100%; /* Allow full width on smaller screens */
+    padding: 20px;
+    /* Reduce padding for smaller screens */
+    max-width: 100%;
+    /* Allow full width on smaller screens */
   }
 
   .experience-logo {
-    width: 60px; /* Smaller logo for smaller screens */
+    width: 30%;
+  }
+
+  .experience-title {
+    width: 70%;
   }
 }

@@ -1,18 +1,26 @@
-import React from 'react';
-import './EducationExperience.css';
+import React from "react";
+import "./EducationExperience.css";
 
-const EducationExperience = ({ 
-  title, 
-  points = [], 
-  grade, 
-  fromYear, 
-  toYear, 
-  logo 
+const EducationExperience = ({
+  title,
+  points = [],
+  grade,
+  fromYear,
+  toYear,
+  logo,
 }) => {
   return (
     <div className="education-experience">
-      {logo && <img src={require(`../../../public/assets/images/${logo}.png`)} alt={`${title} logo`} className="experience-logo" />}
-      <h3 className="experience-title">{title}</h3> 
+      <div className="education-header-container">
+        <h3 className="experience-title">{title}</h3>{" "}
+        {logo && (
+          <img
+            src={require(`../../../public/assets/images/${logo}.png`)}
+            alt={`${title} logo`}
+            className="experience-logo"
+          />
+        )}
+      </div>
       <p className="experience-timeline">
         {fromYear} – {toYear || "Present"}
       </p>
@@ -23,7 +31,11 @@ const EducationExperience = ({
           ))}
         </ul>
       )}
-      {grade && <p className="experience-grade"><strong>Grade:</strong> {grade}</p>}
+      {grade && (
+        <p className="experience-grade">
+          <strong>Grade:</strong> {grade}
+        </p>
+      )}
     </div>
   );
 };
