@@ -27,24 +27,44 @@ img {
 }
 
 .navbar-section {
+    position: relative;
     float: right;
 }
 
 .navbar-section a {
     font-size: 14px;
     color: black;
+    margin-right: 20px;
     text-align: center;
-    padding: 10px 16px;
     text-decoration: none;
     margin: 0 10px;
 }
 
-.navbar-section a:hover {
-    background-color: #c0afaf;
-    border-radius: 8px;
+.navbar-section a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #000;
+    transition: color 0.4s ease;
 }
 
-.navbar-section a.active {
-    background-color: #c0afaf;
-    border-radius: 8px;
+.navbar-section a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #c0afaf; /* Underline color */
+    transition: width 0.4s ease; /* Smooth underline effect */
+}
+
+.navbar-section a:hover::after,
+.navbar-section a.active::after {
+    width: 100%;
+}
+
+.navbar-section a:hover {
+    color:#c0afaf;
 }
