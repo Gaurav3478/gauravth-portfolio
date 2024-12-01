@@ -1,17 +1,16 @@
 import React from "react";
-import "./EducationExperience.css";
+import "./ExperienceComponent.css";
 
-const EducationExperience = ({
+const ExperienceComponent = ({
   title,
   points = [],
-  grade,
   fromYear,
   toYear,
   logo,
 }) => {
   return (
-    <div className="education-experience">
-      <div className="education-header-container">
+    <div className="experience-experience">
+      <div className="experience-header-container">
         <h3 className="experience-title">{title}</h3>{" "}
         {logo && (
           <img
@@ -31,13 +30,8 @@ const EducationExperience = ({
           ))}
         </ul>
       )}
-      {grade && (
-        <p className="experience-grade">
-          <strong>Grade:</strong> {grade}
-        </p>
-      )}
     </div>
   );
 };
 
-export default EducationExperience;
+export default ExperienceComponent;
