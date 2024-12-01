@@ -6,12 +6,12 @@ const InitialPage = ({ onTransitionEnd }) => {
 
   useEffect(() => {
     // Trigger fade-out after 4 seconds
-    const timer = setTimeout(() => setFadeOut(true), 4000);
+    const timer = setTimeout(() => setFadeOut(true), 3000);
 
     // Call the callback function after 5 seconds to indicate the transition is complete
     const endTimer = setTimeout(() => {
       onTransitionEnd();
-    }, 3500);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
@@ -27,7 +27,9 @@ const InitialPage = ({ onTransitionEnd }) => {
           alt="Your Name"
           className="photo"
         />
-        <h1 className="name">Gaurav Thakur</h1>
+        <div className="name-wrapper">
+          <h1 className="first-name">Gaurav <span className="last-name">Thakur</span></h1>
+        </div>
       </div>
     </div>
   );

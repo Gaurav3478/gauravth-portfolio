@@ -1,62 +1,103 @@
 .initial-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a2e; /* Background color */
-    color: #ffffff; /* Text color */
-    z-index: 1000;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .initial-page.fade-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a2e; /* Background color */
+  color: #ffffff; /* Text color */
+  z-index: 1000;
+  transition: opacity 1s ease-in-out;
+}
+
+.initial-page.fade-out {
+  opacity: 0;
+}
+
+.content {
+  text-align: center;
+  animation: slide-in 1.5s ease-out forwards;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  animation: fade-in 1.5s ease-out forwards;
+}
+
+/* Name Wrapper */
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* First Name */
+.first-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: slide-in-left 2s ease-out;
+}
+
+/* Last Name */
+.last-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation:fade-in 2s ease-out;
+  animation-delay: 1.5s;
+}
+
+/* Keyframe animations */
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
     opacity: 0;
   }
-  
-  .content {
-    text-align: center;
-    animation: slide-in 1.5s ease-out forwards;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    animation: fade-in 1.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  
-  .name {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    animation: fade-in 2s ease-out forwards;
+  to {
+    opacity: 1;
   }
-  
-  /* Keyframe animations */
-  @keyframes slide-in {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+}
+
+/* First Name Sliding from Left */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
   }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
+}
+
+/* Last Name Sliding from Right */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -27,7 +27,7 @@ function App() {
           <NavBar />
           <hr className='horizontal-line'></hr>
           <Routes>
-            <Route index exact path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/about" element={<AboutPage />} />
