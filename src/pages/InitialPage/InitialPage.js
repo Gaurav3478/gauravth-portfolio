@@ -1,34 +1,42 @@
 import React, { useEffect, useState } from "react";
-import "./InitialPage.css"; // Import the CSS file for styling
+import "./InitialPage.css";
 
 const InitialPage = ({ onTransitionEnd }) => {
-  const [fadeOut, setFadeOut] = useState(false);
+  const [displayText, setDisplayText] = useState(""); // Text to display progressively
+  const fullText = "Gaurav Thakur"; // Full name to display
+  const typingSpeed = 150; // Speed of typing effect in milliseconds
 
   useEffect(() => {
-    // Trigger fade-out after 4 seconds
-    const timer = setTimeout(() => setFadeOut(true), 3000);
+    let charIndex = -1;
 
-    // Call the callback function after 5 seconds to indicate the transition is complete
-    const endTimer = setTimeout(() => {
-      onTransitionEnd();
-    }, 5000);
-
+    const typeInterval = setInterval(() => {
+      if (charIndex < 12) {
+        charIndex++;
+        setDisplayText((prev) => prev + fullText[charIndex]);
+      } else {
+        clearInterval(typeInterval); // Stop interval once all characters are added
+      }
+    }, typingSpeed);
+  
+    const fadeOutTimer = setTimeout(() => onTransitionEnd(), fullText.length * typingSpeed + 500);
+  
     return () => {
-      clearTimeout(timer);
-      clearTimeout(endTimer);
+      clearInterval(typeInterval); // Clear interval on component unmount
+      clearTimeout(fadeOutTimer); // Clear timeout on component unmount
     };
-  }, [onTransitionEnd]);
+  }, [fullText, typingSpeed, onTransitionEnd]);  
 
   return (
-    <div className={`initial-page ${fadeOut ? "fade-out" : ""}`}>
+    <div className="initial-page">
       <div className="content">
         <img
           src="../../../assets/images/gaurav-image.jpeg" // Replace with your image path
-          alt="Your Name"
+          alt="Gaurav Thakur"
           className="photo"
         />
-        <div className="name-wrapper">
-          <h1 className="first-name">Gaurav <span className="last-name">Thakur</span></h1>
+        <div className="typewriter">
+          <span>{displayText}</span>
+          <span className="cursor">|</span>
         </div>
       </div>
     </div>
