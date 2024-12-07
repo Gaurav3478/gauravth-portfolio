@@ -48,7 +48,7 @@
 }
 
 .experience-title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   /* Slightly bigger font */
   font-weight: bold;
   color: #333;
@@ -61,14 +61,14 @@
 }
 
 .experience-timeline {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #666;
   /* Medium gray for secondary text */
   margin-bottom: 15px;
 }
 
 .experience-points {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #444;
   /* Slightly lighter for contrast */
   margin: 20px 0;
