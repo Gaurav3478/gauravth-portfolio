@@ -1,4 +1,4 @@
-.education-experience {
+.education-education {
   width: 70%;
   /* Card width */
   margin: 20px auto;
@@ -25,14 +25,14 @@
   justify-content: space-between;
 }
 
-.education-experience:hover {
+.education-education:hover {
   transform: translateY(-10px);
   /* Slight lift on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   /* More pronounced shadow */
 }
 
-.experience-logo {
+.education-logo {
   width: 10%;
   /* Set a consistent width */
   height: auto;
@@ -47,8 +47,8 @@
   /* Distance from the right edge of the card */
 }
 
-.experience-title {
-  font-size: 1.4rem;
+.education-title {
+  font-size: 1.3rem;
   /* Slightly bigger font */
   font-weight: bold;
   color: #333;
@@ -60,14 +60,14 @@
   width: 90%;
 }
 
-.experience-timeline {
+.education-timeline {
   font-size: 0.9rem;
   color: #666;
   /* Medium gray for secondary text */
   margin-bottom: 15px;
 }
 
-.experience-points {
+.education-points {
   font-size: 1rem;
   color: #444;
   /* Slightly lighter for contrast */
@@ -83,31 +83,31 @@
   /* Indent list items */
 }
 
-.experience-grade {
-  font-size: 1.1rem;
+.education-grade {
+  font-size: 0.9rem;
   font-weight: bold;
   color: #333;
   /* Professional dark gray */
 }
 
-.experience-grade strong {
+.education-grade strong {
   color: #333;
   /* Keep strong text consistent */
 }
 
 @media (max-width: 900px) {
-  .education-experience {
+  .education-education {
     padding: 20px;
     /* Reduce padding for smaller screens */
     max-width: 100%;
     /* Allow full width on smaller screens */
   }
 
-  .experience-logo {
+  .education-logo {
     width: 30%;
   }
 
-  .experience-title {
+  .education-title {
     width: 70%;
   }
 }
