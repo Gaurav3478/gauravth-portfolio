@@ -25,7 +25,6 @@ function App() {
       ) : (
         <BrowserRouter>
           <NavBar />
-          <hr className='horizontal-line'></hr>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/education" element={<Education />} />

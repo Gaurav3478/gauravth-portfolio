@@ -1,13 +1,12 @@
-// src/pages/Home.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <div class="navbar">
-            <div>
-                <NavLink className='portfolio-heading' to='/'>
+        <div className="navbar">
+            <div className="portfolio-heading">
+                <NavLink to="/" className="logo">
                     <span>P</span>
                     <span>O</span>
                     <span>R</span>
@@ -19,13 +18,14 @@ const Navbar = () => {
                     <span>O</span>
                 </NavLink>
             </div>
-            <div className='navbar-section'>
+            <div className="navbar-section">
                 <NavLink to="/about" activeClassName="active">ABOUT</NavLink>
-                <NavLink to="/education" activeClassName="active" >EDUCATION</NavLink>
-                <NavLink to="/experience" activeClassName="active" >EXPERIENCE</NavLink>
-                <NavLink to="/projects" activeClassName="active" >PROJECTS</NavLink>
-                <NavLink to="/contact" activeClassName="active" >CONTACT</NavLink>
-            </div></div>
+                <NavLink to="/education" activeClassName="active">EDUCATION</NavLink>
+                <NavLink to="/experience" activeClassName="active">EXPERIENCE</NavLink>
+                <NavLink to="/projects" activeClassName="active">PROJECTS</NavLink>
+                <NavLink to="/contact" activeClassName="active">CONTACT</NavLink>
+            </div>
+        </div>
     );
 };
 

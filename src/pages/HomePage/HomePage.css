@@ -21,7 +21,7 @@ p {
 
 button {
   padding: 10px 20px;
-  background-color: #c07373;
+  background-color: #492b62;
   font-size: 1rem;
   color: #fff;
   border: none;
@@ -34,11 +34,11 @@ button:hover {
   background-color: #3e6b9a;
 }
 
-.home a{
+.home a {
   text-decoration: none;
 }
 
-.home button{
+.home button {
   display: flex;
   flex-direction: row;
 }

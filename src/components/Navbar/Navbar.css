@@ -1,52 +1,50 @@
 /* Navbar container */
 .navbar {
-    overflow: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 7px 40px;
+    background-color: #492b62;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family:cursive;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.portfolio-heading {
-    padding-left: 20px;
+.portfolio-heading .logo {
     display: flex;
-    flex-direction: row;
-    color: black;
+    font-size: 24px;
+    color: #fff;
     text-decoration: none;
-
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.portfolio-heading p {
-    font-size: 16px;
+.portfolio-heading .logo span {
+    transition: transform 0.3s ease;
 }
 
-img {
-    width: 70px;
-    height: 30px;
+.portfolio-heading .logo:hover span {
+    transform: translateY(-5px);
+    color: #c29696;
 }
 
+/* Navigation links */
 .navbar-section {
-    position: relative;
-    float: right;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar-section a {
-    font-size: 14px;
-    color: black;
-    margin-right: 20px;
-    text-align: center;
+    font-size: 16px;
+    color: #b6b3b3;
     text-decoration: none;
-    margin: 0 10px;
-}
-
-.navbar-section a {
-    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
     position: relative;
-    display: inline-block;
-    padding-bottom: 6px;
-    color: #000;
-    transition: color 0.4s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar-section a::after {
@@ -55,9 +53,14 @@ img {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 3px;
-    background: #c0afaf; /* Underline color */
-    transition: width 0.4s ease; /* Smooth underline effect */
+    height: 2px;
+    background: #c29696;
+    transition: width 0.3s ease;
+}
+
+.navbar-section a:hover,
+.navbar-section a.active {
+    color: white;
 }
 
 .navbar-section a:hover::after,
@@ -65,6 +68,20 @@ img {
     width: 100%;
 }
 
-.navbar-section a:hover {
-    color:#c0afaf;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navbar-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-section a {
+        font-size: 18px;
+    }
 }
